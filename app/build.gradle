@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.javier.flickrphotos"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -91,5 +91,10 @@ dependencies {
     testCompile "org.assertj:assertj-core:$rootProject.assertj"
 
     compile "de.hdodenhof:circleimageview:$rootProject.circle"
+
+    //Glide
+
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glide"
 
 }

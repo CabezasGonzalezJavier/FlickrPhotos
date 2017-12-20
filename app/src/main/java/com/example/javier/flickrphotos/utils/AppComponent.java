@@ -1,6 +1,6 @@
 package com.example.javier.flickrphotos.utils;
 
-import com.example.javier.flickrphotos.MainActivity;
+import com.example.javier.flickrphotos.photo.PhotoActivity;
 
 import javax.inject.Singleton;
 
@@ -12,6 +12,6 @@ import dagger.Component;
 @Singleton
 @Component(modules = AppModule.class)
 public interface AppComponent {
-    void inject(MainActivity mainActivity);
+    void inject(PhotoActivity mainActivity);
 
 }
