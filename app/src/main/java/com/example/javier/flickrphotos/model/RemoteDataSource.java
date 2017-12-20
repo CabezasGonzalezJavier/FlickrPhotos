@@ -20,8 +20,8 @@ public class RemoteDataSource implements Service {
     }
 
     @Override
-    public Observable<Example> getPhotoRx(String format) {
-        return api.getPhotoRx(format);
+    public Observable<Example> getPhotoRx( String method, String apiKey, String tags, String perPage, String format, String nojsoncallback) {
+        return api.getPhotoRx(method, apiKey, tags, perPage, format, nojsoncallback);
     }
 
 }

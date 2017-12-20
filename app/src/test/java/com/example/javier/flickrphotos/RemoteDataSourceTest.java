@@ -16,6 +16,12 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.observers.TestSubscriber;
 
+import static com.example.javier.flickrphotos.utils.Constants.API_KEY;
+import static com.example.javier.flickrphotos.utils.Constants.FORMAT;
+import static com.example.javier.flickrphotos.utils.Constants.METHOD;
+import static com.example.javier.flickrphotos.utils.Constants.NO_JSON_CALL_BACK;
+import static com.example.javier.flickrphotos.utils.Constants.PER_PAGE;
+import static com.example.javier.flickrphotos.utils.Constants.TAGS;
 import static com.example.javier.flickrphotos.utils.Constants.URL_BASE;
 
 /**
@@ -51,7 +57,7 @@ public class RemoteDataSourceTest {
         RemoteDataSource remoteDataSource = new RemoteDataSource(retrofit);
 
         //When
-        remoteDataSource.getPhotoRx("json").subscribe(mSubscriber);
+        remoteDataSource.getPhotoRx(METHOD, API_KEY, TAGS, PER_PAGE, FORMAT, NO_JSON_CALL_BACK).subscribe(mSubscriber);
 
         //Then
         mSubscriber.assertNoErrors();
@@ -70,7 +76,7 @@ public class RemoteDataSourceTest {
         RemoteDataSource remoteDataSource = new RemoteDataSource(retrofit);
 
         //When
-        remoteDataSource.getPhotoRx("json").subscribe(mSubscriber);
+        remoteDataSource.getPhotoRx(METHOD, API_KEY, TAGS, PER_PAGE, FORMAT, NO_JSON_CALL_BACK).subscribe(mSubscriber);
 
         //Then
         mSubscriber.assertNoErrors();

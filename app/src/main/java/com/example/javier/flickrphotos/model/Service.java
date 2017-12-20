@@ -11,6 +11,6 @@ import rx.Observable;
  */
 
 public interface Service {
-    @GET("photos_public.gne")
-    Observable<Example> getPhotoRx(@Query("format") String format);
+    @GET("rest/")
+    Observable<Example> getPhotoRx(@Query("method") String method, @Query("api_key") String apiKey, @Query("tags") String tags, @Query("per_page") String perPage, @Query("format") String format, @Query("nojsoncallback")String nojsoncallback);
 }
