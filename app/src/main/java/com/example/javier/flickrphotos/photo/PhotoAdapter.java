@@ -50,7 +50,7 @@ public class PhotoAdapter extends RecyclerView
 
         @Override
         public void onClick(View v) {
-            sClickListener.onItemClick(getAdapterPosition());
+            sClickListener.onItemClick(getAdapterPosition(), v);
         }
     }
     public void setOnItemClickListener(PhotoAdapter.ClickListener myClickListener) {
@@ -75,7 +75,7 @@ public class PhotoAdapter extends RecyclerView
     public void onBindViewHolder(PhotoAdapter.DataObjectHolder holder, int position) {
 
         holder.mName.setText(mResult.get(position).getTitle());
-        Glide.with(mContext).load(mResult.get(position).getLink()).into(holder.mImageView);
+        Glide.with(mContext).load(mResult.get(position).getMedia().getM()).into(holder.mImageView);
 
     }
 
@@ -85,6 +85,6 @@ public class PhotoAdapter extends RecyclerView
     }
 
     interface ClickListener {
-        void onItemClick(int position);
+        void onItemClick(int position, View view);
     }
 }

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/photo_item_constraintLayout"
+    android:layout_margin="5dp"
     android:layout_width="100dp"
     android:layout_height="100dp">
 
@@ -32,6 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:textSize="@dimen/textSizeTitle"
+        android:layout_margin="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

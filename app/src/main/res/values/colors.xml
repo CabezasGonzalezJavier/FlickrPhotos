@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-
-    <color name="colorBackgroundText">#80000000</color>
-    <color name="colorTextImage">@android:color/white</color>
+    //Popup
+    <color name="colorPopUp">#80ffffff</color>
+    <color name="colorPopUpWindow">#000000</color>
+    <color name="colorPopUpMarcoWindow">#FFFFFF</color>
 </resources>

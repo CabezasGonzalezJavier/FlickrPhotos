@@ -4,4 +4,7 @@
     <string name="error_server">There are some problems to bring the data</string>
 
     <string name="no_found">No found</string>
+
+
+    <string name="closebutton">Close [x]</string>
 </resources>
